@@ -1,0 +1,26 @@
+﻿<Window x:Class="QuickTests.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:main="clr-namespace:QuickTests" 
+        xmlns:view="clr-namespace:QuickTests.View"
+        mc:Ignorable="d"
+        Title="Quick tests and code samples" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Inheritance" Foreground="Green">
+                <view:Inheritance x:Name="Inheritance"/>
+            </TabItem >
+            <TabItem Header="Fragile Base Class" Foreground="Red">
+                <view:FragileBase x:Name="FragileBase"/>
+            </TabItem>
+            <TabItem Header="Call base virtual method" Foreground="Blue">
+                <view:CallOverridenVirtualMethod x:Name="CallOverridenVirtualMethod"/>
+            </TabItem>
+            <TabItem Header="Threads cross var access" Foreground="orange">
+                <view:CrossThreadingVarAccess x:Name="CrossThreadingVarAccess"/>
+            </TabItem>            
+        </TabControl>
+    </Grid>    
+</Window>
