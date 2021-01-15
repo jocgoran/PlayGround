@@ -1,7 +1,20 @@
-﻿namespace QuickTests.ViewModel.Inheritance
+﻿using System.Collections.Generic;
+
+namespace QuickTests.ViewModel.Inheritance
 {
     class Child2 : BaseClass
     {
+
+        public IList<int> ProperyList
+        {
+            get
+            {
+                if (_fieldList == null)
+                    _fieldList = new List<int>(2);
+                return _fieldList;
+            }
+        }
+        protected IList<int> _fieldList;
 
         public Child2()
         {

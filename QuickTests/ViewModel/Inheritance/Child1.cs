@@ -10,6 +10,17 @@ namespace QuickTests.ViewModel.Inheritance
 {
     class Child1 : BaseClass
     {
+        public IList<int> ProperyList
+        {
+            get
+            {
+                if (_fieldList == null)
+                    _fieldList = new List<int>(1);
+                return _fieldList;
+            }
+        }
+        public IList<int> _fieldList;
+
         public Child1()
         {
             a = 1;
