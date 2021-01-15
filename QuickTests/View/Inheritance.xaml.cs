@@ -21,12 +21,13 @@ namespace QuickTests.View
 
         private void InitChilds(object sender, RoutedEventArgs e)
         {
-            BaseClass class1 = new Child1();
-            BaseClass class2 = new Child2();
+            Child1 class1 = new Child1();
+            Child2 class2 = new Child2();
             ConsoleInnerText += $"Value of class1 after initialization {class1.a} \n";
             ConsoleInnerText += $"Value of class2 after initialization {class2.a} \n";
             class1.WriteItself();
             class2.WriteItself();
+            class2.MetdohOnlyInclass2();
             OnPropertyChanged("ConsoleInnerText");
         }
 

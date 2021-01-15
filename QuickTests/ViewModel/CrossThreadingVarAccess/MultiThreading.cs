@@ -26,10 +26,13 @@ namespace QuickTests.ViewModel.CrossThreadingVarAccess
 
             App.mw.CrossThreadingVarAccess.ConsoleInnerText3 += $"In Thread {Thread.CurrentThread.Name}, AFTER Thread.Start(): InstanceVarOfMainThread={InstanceVarOfMainThread}\n";
 
-            //t1.Join();
-            t2.Join();
 
-            App.mw.CrossThreadingVarAccess.ConsoleInnerText3 += $"In Thread {Thread.CurrentThread.Name}, AFTER Thread.Join(): InstanceVarOfMainThread={InstanceVarOfMainThread}\n";
+            App.mw.CrossThreadingVarAccess.ConsoleInnerText3 += $"In Thread {Thread.CurrentThread.Name}, END of constructor: InstanceVarOfMainThread={InstanceVarOfMainThread}\n";
+
+            // waith before destroying the object
+            Thread.Sleep(3000);
+
+            App.mw.CrossThreadingVarAccess.ConsoleInnerText3 += $"In Thread {Thread.CurrentThread.Name}, END of all threads: InstanceVarOfMainThread={InstanceVarOfMainThread}\n";
         }
 
         private void Method1()
