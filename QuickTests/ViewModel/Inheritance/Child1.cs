@@ -10,6 +10,7 @@ namespace QuickTests.ViewModel.Inheritance
 {
     class Child1 : BaseClass
     {
+        public string myString = "abc";
         public Child1()
         {
             a = 1;
