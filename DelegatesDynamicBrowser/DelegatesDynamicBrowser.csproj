@@ -56,11 +56,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\DllConnector.cs" />
-    <Compile Include="View\Delegates.xaml.cs">
-      <DependentUpon>Delegates.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Navigation.xaml.cs">
-      <DependentUpon>Navigation.xaml</DependentUpon>
+    <Compile Include="View\BrowseDll.xaml.cs">
+      <DependentUpon>BrowseDll.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -74,11 +71,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\Delegates.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Navigation.xaml">
+    <Page Include="View\BrowseDll.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

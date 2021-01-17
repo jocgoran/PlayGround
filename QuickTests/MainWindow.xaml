@@ -6,21 +6,21 @@
         xmlns:main="clr-namespace:QuickTests" 
         xmlns:view="clr-namespace:QuickTests.View"
         mc:Ignorable="d"
-        Title="Quick tests and code samples" Height="450" Width="800">
+        Title="Quick tests and code samples" Height="600" Width="1000">
     <Grid>
         <TabControl>
             <TabItem Header="Inheritance" Foreground="Green">
                 <view:Inheritance x:Name="Inheritance"/>
             </TabItem >
-            <TabItem Header="Fragile Base Class" Foreground="Red">
-                <view:FragileBase x:Name="FragileBase"/>
+            <TabItem Header="Convert to XPath" Foreground="Red">
+                <view:ConvertToXPath x:Name="ConvertToXPath"/>
             </TabItem>
             <TabItem Header="Call base virtual method" Foreground="Blue">
                 <view:CallOverridenVirtualMethod x:Name="CallOverridenVirtualMethod"/>
             </TabItem>
             <TabItem Header="Threads cross var access" Foreground="orange">
                 <view:CrossThreadingVarAccess x:Name="CrossThreadingVarAccess"/>
-            </TabItem>            
+            </TabItem>
         </TabControl>
-    </Grid>    
+    </Grid>
 </Window>
