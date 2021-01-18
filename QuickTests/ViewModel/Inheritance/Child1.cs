@@ -20,6 +20,7 @@ namespace QuickTests.ViewModel.Inheritance
             }
         }
         public IList<int> _fieldList;
+        public string myString = "abc";
 
         public Child1()
         {

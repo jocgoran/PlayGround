@@ -64,8 +64,8 @@
     <Compile Include="View\CallOverridenVirtualMethod.xaml.cs">
       <DependentUpon>CallOverridenVirtualMethod.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\FragileBase.xaml.cs">
-      <DependentUpon>FragileBase.xaml</DependentUpon>
+    <Compile Include="View\ConvertToXPath.xaml.cs">
+      <DependentUpon>ConvertToXPath.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Inheritance.xaml.cs">
       <DependentUpon>Inheritance.xaml</DependentUpon>
@@ -90,7 +90,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\FragileBase.xaml">
+    <Page Include="View\ConvertToXPath.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

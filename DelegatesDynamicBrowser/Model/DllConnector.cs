@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DelegatesDynamicBrowser.Model
 {
     static class DllConnector
     {
 
-        public static void Connect()
+        public static void Connect(string OpenFile)
         {
 
-            Assembly SampleAssembly = Assembly.LoadFrom(@"C:\GFMS\UNIQUA\TECNOLOGY\1.0.1\Form\GF.MS.TecForm.Engine.dll");
+            Assembly SampleAssembly = Assembly.LoadFrom(OpenFile);
 
             Type[] types = null;
             try
@@ -35,7 +32,7 @@ namespace DelegatesDynamicBrowser.Model
                 MemberInfo[] members = type.GetMembers();
                 foreach (MemberInfo member in members)
                 {
-                    App.mw.Delegates.OutputConsole.Text += $"{type.Name}.{member.Name}\n";
+                    App.mw.BrowseDll.OutputConsole.Text += $"{type.Name}.{member.Name}\n";
                 }
 
                 MethodInfo Method = type.GetMethod("get_Instance");
@@ -51,10 +48,10 @@ namespace DelegatesDynamicBrowser.Model
                     //Optional = False
                     foreach (ParameterInfo Param in Params)
                     {
-                        App.mw.Delegates.OutputConsole.Text += "    Param=" + Param.Name.ToString();
-                        App.mw.Delegates.OutputConsole.Text += "       Type=" + Param.ParameterType.ToString();
-                        App.mw.Delegates.OutputConsole.Text += "       Position=" + Param.Position.ToString();
-                        App.mw.Delegates.OutputConsole.Text += "       Optional=" + Param.IsOptional.ToString();
+                        App.mw.BrowseDll.OutputConsole.Text += "    Param=" + Param.Name.ToString();
+                        App.mw.BrowseDll.OutputConsole.Text += "       Type=" + Param.ParameterType.ToString();
+                        App.mw.BrowseDll.OutputConsole.Text += "       Position=" + Param.Position.ToString();
+                        App.mw.BrowseDll.OutputConsole.Text += "       Optional=" + Param.IsOptional.ToString();
                     }
                 }
             }

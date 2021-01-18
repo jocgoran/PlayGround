@@ -68,6 +68,13 @@ namespace QuickTests.View
             {
                 ConsoleInnerText += $"{ex.Message} \n";
             }
+
+            // example of up and down casting
+            BaseClass classAsBase = new Child1();
+            Child1 superDooperCasting = classAsBase as Child1;
+            string myNewString = superDooperCasting.myString;
+            ConsoleInnerText += $"Value up and down casting {myNewString} \n";
+
             OnPropertyChanged("ConsoleInnerText");
         }
 
