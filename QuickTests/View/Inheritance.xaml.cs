@@ -75,6 +75,12 @@ namespace QuickTests.View
             string myNewString = superDooperCasting.myString;
             ConsoleInnerText += $"Value up and down casting {myNewString} \n";
 
+            // example of up casting and access method
+            ConsoleInnerText += "-- example of UpCasting and access\n";
+            BaseClass classACastedBase = new Child1();
+            classACastedBase.WriteItself();
+            //ConsoleInnerText += $"Value up and down casting {myNewString} \n";
+
             OnPropertyChanged("ConsoleInnerText");
         }
 

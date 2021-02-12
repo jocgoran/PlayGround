@@ -15,14 +15,14 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <!-- Cell 0 -->
+        <!-- Cell 1.1. -->
         <TextBox x:Name="OpenFileDlg" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="20" Margin="10,10,0,0" Text=" ... choose an XML file" VerticalAlignment="Top" Width="680"/>
         <Button Content="Open" Grid.Column="1" HorizontalAlignment="Left" Margin="300,10,10,0" VerticalAlignment="Top" Width="75" Height="20" Click="OpenFileDialog"/>
-        <!-- Cell 1 -->
+        <!-- Cell 2.1. -->
         <TextBlock Text="XML Content" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <TextBox x:Name="XMLContent" HorizontalAlignment="Left" Height="360" Width="375" Margin="10,20,10,10" VerticalAlignment="Top" Grid.Row="1" HorizontalScrollBarVisibility="Auto" 
                      VerticalScrollBarVisibility="Auto"/>
-        <!-- Cell 1.2. -->
+        <!-- Cell 2.2. -->
         <Button Content="Format to XPath" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,10,0" VerticalAlignment="Top" Width="90" Height="20" Click="WalkThroughXML"/>
         <TextBlock Text="XPath format" HorizontalAlignment="Left" Margin="110,0,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top"/>
         <TextBox x:Name="XPathFormatted" HorizontalAlignment="Left" Height="360" Width="375" Margin="10,20,10,10" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" HorizontalScrollBarVisibility="Auto" 

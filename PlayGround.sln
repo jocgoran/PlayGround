@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesDynamicBrowser", "DelegatesDynamicBrowser\DelegatesDynamicBrowser.csproj", "{F670489B-6B2C-48F6-8631-05E6245E3290}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessReflection", "DelegatesDynamicBrowser\ProcessReflection.csproj", "{F670489B-6B2C-48F6-8631-05E6245E3290}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickTests", "QuickTests\QuickTests.csproj", "{68D80033-37D8-42A7-9F8C-D2CB5E701B84}"
 EndProject

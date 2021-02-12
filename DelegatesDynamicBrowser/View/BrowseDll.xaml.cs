@@ -2,10 +2,10 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace DelegatesDynamicBrowser.View
+namespace ProcessReflection.View
 {
     /// <summary>
-    /// Interaction logic for Delegates.xaml
+    /// Interaction logic for BrowseDll.xaml
     /// </summary>
     public partial class BrowseDll : UserControl
     {

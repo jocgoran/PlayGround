@@ -30,8 +30,8 @@ namespace QuickTests.ViewModel.Inheritance
         public override void WriteItself()
         {
             a = 11;
-            App.mw.Inheritance.ConsoleInnerText += $"This is the value changed of class1 {a} \n";
-            App.mw.Inheritance.ConsoleInnerText += $"This is the value of baseClass {base.a} \n";
+            App.mw.Inheritance.ConsoleInnerText += $"I am Child1 class and this is the value changed of class1 {a} \n";
+            App.mw.Inheritance.ConsoleInnerText += $"I am Child1 class and his is the value of baseClass {base.a} \n";
         }
 
     }

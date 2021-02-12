@@ -30,6 +30,11 @@
             <LineBreak/>
             <Run Text="-&gt; "/>
             <Run Text="NullReferenceExceptions"/>
+            
+            <Run Text="Behavior when a ChildClass is instantiated and we access a child propery from UpCasted Child."/>
+            <LineBreak/>
+            <Run Text="-&gt; "/>
+            <Run Text="NullReferenceExceptions"/>            
         </TextBlock>
         <TextBox Grid.Column="1" Name="OutputConsole" Text="{Binding Path=ConsoleInnerText}" />
         <Button x:Name="button" Content="CreateClasses" Click="InitChilds" Margin="10,10,10,0" VerticalAlignment="Top" Height="30"/>

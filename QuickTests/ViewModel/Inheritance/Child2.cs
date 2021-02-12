@@ -24,12 +24,12 @@ namespace QuickTests.ViewModel.Inheritance
         public override void WriteItself()
         {
             a = 22;
-            App.mw.Inheritance.ConsoleInnerText += $"This is the value changed of class2: {a} \n";
+            App.mw.Inheritance.ConsoleInnerText += $"I am in Child2 and this is the value changed of class2: {a} \n";
         }
 
         public void MetdohOnlyInclass2()
         {
-            App.mw.Inheritance.ConsoleInnerText += "Here I am in method \"MetdohOnlyInClass2\"\n";
+            App.mw.Inheritance.ConsoleInnerText += "Here I am Child2 in method \"MetdohOnlyInClass2\"\n";
         }
         
     }

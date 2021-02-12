@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace DelegatesDynamicBrowser.Model
+namespace ProcessReflection.Model
 {
     static class DllConnector
     {
@@ -54,11 +55,37 @@ namespace DelegatesDynamicBrowser.Model
                         App.mw.BrowseDll.OutputConsole.Text += "       Optional=" + Param.IsOptional.ToString();
                     }
                 }
-            }
+
+                var delegateMethod = type.GetMethod("Invoke");
+
+                var @params = delegateMethod.GetParameters();
+                var returnType = delegateMethod.ReturnType;
+
+                var matchingMethods = type
+                    .Assembly
+                    .GetTypes()
+                    .SelectMany(t => t.GetMethods())
+                    .Where(m =>
+                    {
+                        if (m.ReturnType != returnType)
+                            return false;
+                        var currParams = m.GetParameters();
+                        if (currParams.Length != @params.Length)
+                            return false;
+                        for (var i = 0; i < currParams.Length; i++)
+                            if (currParams[i] != @params[i])
+                                return false;
+
+                        return true;
+                    });
+            } // loop over types
+
             //Type type = Type.GetType(className, true);
             //dynamic instance = Activator.CreateInstance(type);
             //var response = instance.YourMethod();
-        }
+
+
+        } // end of method
 
         public static void ThrowReflectionTypeLoadException(Assembly assembly, ReflectionTypeLoadException ex)
         {
@@ -76,10 +103,11 @@ namespace DelegatesDynamicBrowser.Model
                 {
                     loaderMessages.AppendFormat("- Unable to load type: {0}", loaderException.TypeName).Append(Environment.NewLine); ;
                 }
-                
+
             }
 
             throw new Exception(loaderMessages.ToString(), ex);
-        }
-    }
+        } // end if ThrowReflectionTypeLoadException
+
+    }  // end of class
 }

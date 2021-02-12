@@ -16,7 +16,7 @@ namespace QuickTests.ViewModel.Inheritance
 
         public virtual void WriteItself()
         {
-            App.mw.Inheritance.ConsoleInnerText += $"This is the value from BaseClass {a} \n";
+            App.mw.Inheritance.ConsoleInnerText += $"I am BaseClass and this is the value a from BaseClass {a} \n";
         }
 
     }
