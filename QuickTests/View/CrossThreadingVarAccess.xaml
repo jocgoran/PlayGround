@@ -24,6 +24,6 @@
         </TextBlock>
         <TextBox Grid.Column="1" Name="OutputConsole1" Text="{Binding Path=ConsoleInnerText1}"/>
         <TextBox Grid.Column="2" Name="OutputConsole2" Text="{Binding Path=ConsoleInnerText2}"/>
-        <TextBox Grid.Row="1"  Grid.Column="1" Grid.ColumnSpan="2" Name="OutputConsole3" Text="{Binding Path=ConsoleInnerText3}"/>        
+        <TextBox Grid.Row="1"  Grid.Column="1" Grid.ColumnSpan="2" Name="OutputConsole3" Text="{Binding Path=ConsoleInnerText3}"/>
     </Grid>
 </UserControl>

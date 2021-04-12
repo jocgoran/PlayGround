@@ -27,7 +27,7 @@ namespace QuickTests.View
             Child2 class2 = new Child2();
             ConsoleInnerText += $"Value of class1 after initialization {class1.a} \n";
             ConsoleInnerText += $"Value of class2 after initialization {class2.a} \n";
-            
+
             // child variables override
             class1.WriteItself();
             class2.WriteItself();
@@ -38,11 +38,12 @@ namespace QuickTests.View
             class2.MetdohOnlyInclass2();
 
             // Create base class and DownCast
-            ConsoleInnerText += "Intantiate a BaseClass and try to access the child\n";
+            ConsoleInnerText += "Intantiate a BaseClass and try to access the base method\n";
             BaseClass baseClass = new BaseClass();
+            baseClass.WriteItself();
             // SuperDuper
+            ConsoleInnerText += "Intantiate a BaseClass and try to access the child\n";
             Child1 superDuperChild1 = baseClass as Child1;
-            
 
             ConsoleInnerText += "1.  By Property\n";
             try
@@ -57,7 +58,7 @@ namespace QuickTests.View
             }
 
             // SuperDuper
-            ConsoleInnerText += "1.  By field\n";
+            ConsoleInnerText += "1. By field\n";
             try
             {
                 IList<int> myVar = superDuperChild1._fieldList;

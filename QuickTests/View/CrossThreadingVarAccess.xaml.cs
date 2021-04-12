@@ -1,7 +1,7 @@
-﻿using System.ComponentModel;
+﻿using QuickTests.ViewModel.CrossThreadingVarAccess;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
-using QuickTests.ViewModel.CrossThreadingVarAccess;
 
 namespace QuickTests.View
 {
