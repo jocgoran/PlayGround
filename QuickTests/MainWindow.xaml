@@ -21,6 +21,9 @@
             <TabItem Header="Threads cross var access" Foreground="orange">
                 <view:CrossThreadingVarAccess x:Name="CrossThreadingVarAccess"/>
             </TabItem>
+            <TabItem Header="Speed comparison: threads vs task vs seq" Foreground="magenta">
+                <view:ThreadTickCount x:Name="ThreadTickCount"/>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>

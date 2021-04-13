@@ -58,6 +58,7 @@
     <Compile Include="ViewModel\CallOverridenVirtualMethod\BaseClass.cs" />
     <Compile Include="ViewModel\CallOverridenVirtualMethod\Child.cs" />
     <Compile Include="ViewModel\CrossThreadingVarAccess\MultiThreading.cs" />
+    <Compile Include="ViewModel\ThreadTickCount.cs" />
     <Compile Include="View\CrossThreadingVarAccess.xaml.cs">
       <DependentUpon>CrossThreadingVarAccess.xaml</DependentUpon>
     </Compile>
@@ -69,6 +70,9 @@
     </Compile>
     <Compile Include="View\Inheritance.xaml.cs">
       <DependentUpon>Inheritance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ThreadTickCount.xaml.cs">
+      <DependentUpon>ThreadTickCount.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +99,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Inheritance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ThreadTickCount.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
